@@ -1,0 +1,90 @@
+/*
+ * @Description: 
+ * @Version:  
+ * @Autor:  
+ * @Date: 2022-06-20 14:46:02
+ * @LastEditors:  
+ * @LastEditTime: 2022-08-31 17:00:40
+ *  Copyright 2022 lanxin
+ */
+{
+    "files.associations": {
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "strstream": "cpp",
+        "*.tcc": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp",
+        "cstdint": "cpp",
+        "ctime": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "fstream": "cpp",
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "numeric": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp",
+        "utility": "cpp",
+        "typeinfo": "cpp",
+        "valarray": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "bit": "cpp",
+        "bitset": "cpp",
+        "cinttypes": "cpp"
+    },
+    "fileheader.configObj": {
+        "createHeader": false, // 新建⽂件⾃动添加头部注释
+        "autoAdd": false, // 检测⽂件没有头部注释，⾃动添加⽂件头部注释
+        "autoAlready": false, // 只让⽀持的语⾔，⾃动添加头部注释
+        "customHasHeadEnd": {
+            "cpp": "cancel head and function"
+        },
+        "language": {
+            // ⼀次匹配多种⽂件后缀⽂件 不⽤重复设置
+            "h/hpp/cpp/cc": {
+                "middle": "//"
+            }
+        }
+    },
+    "fileheader.customMade": {
+        "custom_string_obkoro1_copyright": " Copyright ${now_year} lanxin"
+    },
+    "files.insertFinalNewline": true, // ⽂件末尾⾃动插⼊⼀空⾏
+    "C_Cpp.clang_format_style": "Google"
+}
