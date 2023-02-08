@@ -4,7 +4,12 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/x86_64-linux-gnu/qt5"
+                "/mnt/home/Data/SLAM/markerslam/install/include",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/mnt/home/Data/Workspace/ROS_Melodic/tagslam_ws/devel/include/**",
+                "/mnt/home/Data/Workspace/ROS_Melodic/marker_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/usr/include/**"
             ],
             "defines": [],
             //"compilerPath": "/usr/bin/clang",
