@@ -1,13 +1,41 @@
-/*
- * @Description: 
- * @Version:  
- * @Autor:  
- * @Date: 2022-06-20 14:46:02
- * @LastEditors:  
- * @LastEditTime: 2023-02-08 15:08:25
- *  Copyright 2022 lanxin
- */
 {
+    //path: maybe need modify, besides, such as clangd(compile-commands-dir)
+    "cpplint.cpplintPath": "/home/fr1511b/opt/miniconda3/bin/cpplint",
+    "sonarlint.ls.javaHome": "/usr/lib/jvm/java-17-oracle",
+    "sonarlint.pathToCompileCommands": "/your_dir/build/compile_commands.json",
+    "clangd.path": "/home/fr1511b/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.6/clangd_15.0.6/bin/clangd",
+    "clang.executable": "/usr/bin/clang",
+    "python.autoComplete.extraPaths": [
+        "/mnt/home/Data/Workspace/ROS_Melodic/kalibr_ws/devel/lib/python2.7/dist-packages",
+        "/mnt/home/Data/Workspace/ROS_Melodic/tagslam_ws/devel/lib/python2.7/dist-packages",
+        "/mnt/home/Data/Workspace/ROS_Melodic/marker_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    // vscode
+    "update.mode": "manual",
+    "window.openFoldersInNewWindow": "on",
+    "debug.onTaskErrors": "showErrors",
+    "files.autoGuessEncoding": true,
+    "files.insertFinalNewline": true, //文件末尾自动插入一空行
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "*.puml": "plantuml"
+    },
+    "editor.formatOnType": true,
+    "editor.fontFamily": "'Fira Code', 'Consolas', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.tabSize": 2,
+    "editor.minimap.maxColumn": 80,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "C_Cpp.clang_format_style": "Google",
+    // ros
+    "ros.distro": "melodic",
     "files.associations": {
         "*.puml": "plantuml",
         "cctype": "cpp",
@@ -98,26 +126,126 @@
         "geometry": "cpp",
         "*.ipp": "cpp"
     },
-    // "fileheader.configObj": {
-    //     "createHeader": false, // 新建⽂件⾃动添加头部注释
-    //     "autoAdd": false, // 检测⽂件没有头部注释，⾃动添加⽂件头部注释
-    //     "autoAlready": false, // 只让⽀持的语⾔，⾃动添加头部注释
-    //     "customHasHeadEnd": {
-    //         "cpp": "cancel head and function"
-    //     },
-    //     "language": {
-    //         // ⼀次匹配多种⽂件后缀⽂件 不⽤重复设置
-    //         "h/hpp/cpp/cc": {
-    //             "middle": "//"
-    //         }
-    //     }
-    // },
+    // fileheader
+    "fileheader.cursorMode": {
+        "description": "",
+        "param": "",
+        "return": "",
+        "author": " "
+    },
+    "fileheader.configObj": {
+        "createFileTime": true,
+        "language": {
+            "languagetest": {
+                "head": "/$$",
+                "middle": " $ @",
+                "end": " $/"
+            },
+            "h/c/hpp/cpp": {
+                "head": "/*************************************************************************************",
+                "middle": " * ",
+                "end": " *************************************************************************************/"
+            },
+            "py": {
+                "head": "'''",
+                "middle": " ",
+                "end": "'''"
+            }
+        },
+        "autoAdd": true,
+        "autoAddLine": 100,
+        "autoAlready": true,
+        "annotationStr": {
+            "head": "/*",
+            "middle": " * @",
+            "end": " */",
+            "use": false
+        },
+        "headInsertLine": {
+            "php": 2,
+            "sh": 2
+        },
+        "beforeAnnotation": {
+            "文件后缀": "该文件后缀的头部注释之前添加某些内容"
+        },
+        "afterAnnotation": {
+            "文件后缀": "该文件后缀的头部注释之后添加某些内容"
+        },
+        "specialOptions": {
+            "特殊字段": "自定义比如LastEditTime/LastEditors"
+        },
+        "switch": {
+            "newlineAddAnnotation": true
+        },
+        "supportAutoLanguage": [],
+        "prohibitAutoAdd": [
+            "json"
+        ],
+        "prohibitItemAutoAdd": [
+            "项目的全称, 整个项目禁止自动添加头部注释, 可以使用快捷键添加"
+        ],
+        "moveCursor": true,
+        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+        "atSymbol": [
+            "@",
+            "@"
+        ],
+        "atSymbolObj": {
+            "文件后缀": [
+                "头部注释@符号",
+                "函数注释@符号"
+            ]
+        },
+        "colon": [
+            ": ",
+            ": "
+        ],
+        "colonObj": {
+            "文件后缀": [
+                "头部注释冒号",
+                "函数注释冒号"
+            ]
+        },
+        "filePathColon": "路径分隔符替换",
+        "showErrorMessage": false,
+        "wideSame": false,
+        "wideNum": 13,
+        "functionWideNum": 0,
+        "CheckFileChange": false,
+        "createHeader": true,
+        "useWorker": false,
+        "designAddHead": false,
+        "headDesignName": "random",
+        "headDesign": false,
+        "cursorModeInternal": false
+    },
     "fileheader.customMade": {
         "custom_string_obkoro1_copyright": "Copyright ${now_year} lanxin"
     },
-    "files.insertFinalNewline": true, // ⽂件末尾⾃动插⼊⼀空⾏
-    "C_Cpp.clang_format_style": "Google",
-    "ros.distro": "melodic",
+    // cpplint
+    "cpplint.languages": [
+        "cpp",
+        "c"
+    ],
+    "cpplint.filters": [ //屏蔽一些无关代码质量的检测
+        "-runtime/reference",
+        "-build/include_subdir",
+        "-build/c++11",
+        "-build/include_order",
+        "-legal/copyright"
+    ],
+    // sonarlint
+    "sonarlint.output.showVerboseLogs": true,
+    "sonarlint.output.showAnalyzerLogs": true,
+    "sonarlint.connectedMode.connections.sonarcloud": [
+        {
+            "organizationKey": "lx",
+            "connectionId": "lx",
+            "disableNotifications": false
+        }
+    ],
+    // clangd
+    "clangd.detectExtensionConflicts": false,
     "clangd.arguments": [
         // 让 Clangd 生成更详细的日志
         "--log=verbose",
@@ -154,12 +282,8 @@
         // compelie_commands.json 文件的目录位置(相对于工作区，由于 CMake 生成的该文件默认在 build 文件夹中，故设置为 build)
         "--compile-commands-dir=/mnt/home/Data/SLAM/markerslam/ros/markerslam_ws/build"
     ],
-    // "clang-tidy.buildPath": "/mnt/home/Data/SLAM/markerslam/ros/markerslam_ws/build",
-    // "sonarlint.pathToCompileCommands": "/mnt/home/Data/SLAM/markerslam/ros/markerslam_ws/build/compile_commands.json",
-    "python.autoComplete.extraPaths": [
-        "/mnt/home/Data/Workspace/ROS_Melodic/kalibr_ws/devel/lib/python2.7/dist-packages",
-        "/mnt/home/Data/Workspace/ROS_Melodic/tagslam_ws/devel/lib/python2.7/dist-packages",
-        "/mnt/home/Data/Workspace/ROS_Melodic/marker_ws/devel/lib/python2.7/dist-packages",
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ]
+    // tabnine
+    "tabnine.experimentalAutoImports": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "bracketPairColorizer.depreciation-notice": false
 }
