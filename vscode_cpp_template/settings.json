@@ -14,6 +14,7 @@
     // vscode
     "update.mode": "manual",
     "window.openFoldersInNewWindow": "on",
+    "C_Cpp.intelliSenseEngine": "disabled",
     "debug.onTaskErrors": "showErrors",
     "files.autoGuessEncoding": true,
     "files.insertFinalNewline": true, //文件末尾自动插入一空行
